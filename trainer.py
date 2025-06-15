@@ -664,7 +664,7 @@ class Trainer(object):
             disable_iterator_cache=disable_iterator_cache,
         )
         self.reset_dummy_batch(batch_iterator.first_batch)
-        batch_iterator.dataset.dataset._seek()
+        # batch_iterator.dataset.dataset._seek()
         return batch_iterator
 
     def get_valid_iterator(

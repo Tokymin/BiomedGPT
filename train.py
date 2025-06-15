@@ -99,12 +99,12 @@ def main(cfg: FairseqConfig) -> None:
         model = task.build_model(cfg.model)
     
     # bitfit
-    if cfg.model.bitfit:
-        for name, param in model.named_parameters():
-            if ("layer_norm" in name and "bias" in name) or ("fc" in name and "bias" in name):
-                param.requires_grad = True
-            else:
-                param.requires_grad = False
+    # if cfg.model.bitfit:
+    #     for name, param in model.named_parameters():
+    #         if ("layer_norm" in name and "bias" in name) or ("fc" in name and "bias" in name):
+    #             param.requires_grad = True
+    #         else:
+    #             param.requires_grad = False
 
     criterion = task.build_criterion(cfg.criterion)
     logger.info(model)
