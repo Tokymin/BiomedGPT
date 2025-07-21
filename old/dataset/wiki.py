@@ -13,8 +13,8 @@ def clean_file(input_path, output_path):
                 line = re.sub(r'\s+', ' ', line)     # 合并多个空格
                 f_out.write(line + '\n')
 
-input_dir = "/data2/toky/Datasets/wikitext/wikitext-103-v1/wikitext-103"
-output_dir = "/data2/toky/Datasets/wikitext/wikitext-103-v1/wikitext-103-cleaned"
+input_dir = "/mnt/share/Datasets/wikitext/wikitext-103-v1"
+output_dir = "/mnt/share/Datasets/wikitext/wikitext-103-v1/wikitext-103-cleaned"
 
 os.makedirs(output_dir, exist_ok=True)
 
